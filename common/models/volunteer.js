@@ -24,7 +24,7 @@ module.exports = function(Volunteer) {
       type: 'string'
     }],
     returns: {
-      arg: 'greeting',
+      arg: 'attendance',
       type: 'object'
     }
   });

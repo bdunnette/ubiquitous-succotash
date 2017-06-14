@@ -39,9 +39,48 @@ function ConfigBlock($stateProvider, $urlRouterProvider) {
   var HomeState = {
     name: 'home',
     url: '/',
-    template: '<ui-view></ui-view>'
+    templateUrl: 'views/volunteer-list.html',
+    controller: 'VolunteerListController'
+  };
+
+  var VolunteerState = {
+    name: 'volunteerView',
+    url: '/volunteer/:volunteerId',
+    templateUrl: 'views/volunteer-view.html',
+    controller: 'VolunteerViewController'
   };
 
   $stateProvider.state('home', HomeState);
+  $stateProvider.state('volunteerView', VolunteerState);
   $urlRouterProvider.otherwise('/');
 }
+
+app.controller('VolunteerListController', function($scope, $state, Volunteer) {
+  // Fetch all volunteers' name and ID
+  Volunteer.find({
+    filter: {
+      fields: ['name', 'id']
+    }
+  }, function(volunteers) {
+    $scope.volunteers = volunteers;
+  }, function(error) {
+    console.error(error);
+  });
+});
+
+app.controller('VolunteerViewController', function($scope, $state, $stateParams, Volunteer) {
+  // Fetch volunteer by ID
+  Volunteer.findOne({
+    filter: {
+      where: {
+        id: $stateParams.volunteerId
+      },
+      include: ['attendances']
+    }
+  }, function(volunteer) {
+    console.log(volunteer);
+    $scope.volunteer = volunteer;
+  }, function(error) {
+    console.error(error);
+  });
+});

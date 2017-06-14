@@ -1,5 +1,7 @@
+<html ng-app="folks">
 <head>
   <title>folks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- bower:css -->
   <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css" />
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
@@ -10,25 +12,22 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body ng-app="folks">
-  <div class="container">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<body>
+  <div class="container-fluid">
+    <div class="navbar navbar-inverse navbar-fixed" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" ui-sref="home">folks</a>
+          <a class="navbar-brand" ui-sref="home" ui-sref-active="active">folks</a>
         </div>
         <div>
           <ul class="nav navbar-nav">
             <li>
-              <a ui-sref="home">Home</a>
+              <a ui-sref="home" >Home</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <ol class="breadcrumb">
-      <li><a href="#">Home</a></li>
-    </ol>
     <div ui-view></div>
   </div>
   <!-- bower:js -->
@@ -47,3 +46,4 @@
   <script src="js/lb-services.js"></script>
   <script src="js/app.js"></script>
 </body>
+</html>
