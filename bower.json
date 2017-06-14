@@ -1,0 +1,35 @@
+{
+  "name": "folks",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    },
+    "angular-bootstrap": {
+      "main": [
+        "ui-bootstrap-csp.css",
+        "ui-bootstrap-tpls.min.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "font-awesome": "^4.7.0",
+    "bootstrap": "^3.3.7",
+    "angular-resource": "^1.6.4",
+    "angular-ui-router": "^1.0.3",
+    "angular-bootstrap": "^2.5.0",
+    "angular-touch": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "angular-live-set": "*",
+    "angular-cookies": "^1.6.4"
+  }
+}

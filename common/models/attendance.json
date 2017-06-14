@@ -1,0 +1,31 @@
+{
+  "name": "Attendance",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "start": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "end": {
+      "type": "date"
+    },
+    "duration": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "volunteer": {
+      "type": "belongsTo",
+      "model": "Volunteer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
