@@ -1,26 +1,22 @@
 {
-  "name": "Volunteer",
+  "name": "Document",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "email": {
-      "type": "string"
+    "body": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "attendances": {
-      "type": "hasMany",
-      "model": "Attendance",
-      "foreignKey": ""
-    },
     "signatures": {
       "type": "hasMany",
       "model": "Signature",

@@ -30,6 +30,7 @@
     "angular-animate": "^1.6.4",
     "angular-sanitize": "^1.6.4",
     "angular-live-set": "*",
-    "angular-cookies": "^1.6.4"
+    "angular-cookies": "^1.6.4",
+    "ubuntu-fontface": "^0.1.13"
   }
 }

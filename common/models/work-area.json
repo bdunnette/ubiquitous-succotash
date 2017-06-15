@@ -1,5 +1,5 @@
 {
-  "name": "Volunteer",
+  "name": "WorkArea",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "email": {
+    "description": {
       "type": "string"
     }
   },
@@ -19,11 +19,6 @@
     "attendances": {
       "type": "hasMany",
       "model": "Attendance",
-      "foreignKey": ""
-    },
-    "signatures": {
-      "type": "hasMany",
-      "model": "Signature",
       "foreignKey": ""
     }
   },

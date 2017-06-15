@@ -2,22 +2,20 @@
 
 module.exports = function(Volunteer) {
   var app = require('../../server/server');
-  Volunteer.signIn = function(task, id, cb) {
-    console.log(task);
-    console.log(id);
-    var Attendance = app.models.Attendance;
-    Attendance.create({
-      task: task,
-      volunteerId: id
-    }).then(function(attendance) {
-      console.log(attendance);
-      cb(null, attendance);
+  Volunteer.signIn = function(workAreaId, id, cb) {
+    Volunteer.findById(id, function(err, volunteer){
+      console.log(volunteer);
+      // From http://loopback.io/doc/en/lb3/HasMany-relations.html#methods-added-to-the-model
+      volunteer.attendances.create({workAreaId: workAreaId}, function(attendance){
+        console.log(attendance);
+        cb(null, attendance);
+      });
     });
   }
 
   Volunteer.remoteMethod('signIn', {
     accepts: [{
-      arg: 'task',
+      arg: 'workArea',
       type: 'string'
     }, {
       arg: 'id',

@@ -13,7 +13,7 @@ module.exports = function(Attendance) {
     } else {
       var attendance = ctx.data;
     }
-    console.log(attendance);
+    console.log(`Saving attendance: ${attendance}`);
     if (attendance.start && attendance.end) {
       console.log(moment(attendance.end).isSameOrBefore(attendance.start));
       if (moment(attendance.end).isSameOrBefore(attendance.start)) {

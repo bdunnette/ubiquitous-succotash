@@ -51,5 +51,17 @@
   "Attendance": {
     "dataSource": "db",
     "public": true
+  },
+  "Signature": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Document": {
+    "dataSource": "db",
+    "public": true
+  },
+  "WorkArea": {
+    "dataSource": "db",
+    "public": true
   }
 }

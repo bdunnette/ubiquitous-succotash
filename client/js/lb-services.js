@@ -4871,7 +4871,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * Data properties:
              *
-             *  - `greeting` – `{object=}` -
+             *  - `attendance` – `{object=}` -
              */
             "signIn": {
               url: urlBase + "/Volunteers/signIn",

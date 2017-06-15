@@ -1,33 +1,32 @@
 {
-  "name": "Attendance",
+  "name": "Signature",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "start": {
+    "date": {
       "type": "date",
       "required": true,
       "defaultFn": "now"
     },
-    "end": {
-      "type": "date"
-    },
-    "duration": {
-      "type": "string"
+    "signed": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   },
   "validations": [],
   "relations": {
+    "document": {
+      "type": "belongsTo",
+      "model": "Document",
+      "foreignKey": ""
+    },
     "volunteer": {
       "type": "belongsTo",
       "model": "Volunteer",
-      "foreignKey": ""
-    },
-    "workArea": {
-      "type": "belongsTo",
-      "model": "WorkArea",
       "foreignKey": ""
     }
   },
