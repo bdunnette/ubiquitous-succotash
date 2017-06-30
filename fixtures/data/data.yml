@@ -2,3 +2,8 @@ Volunteer:
  volunteer{1..10}:
    name: "{{name.firstName}} {{name.lastName}}"
    email: "{{internet.email}}"
+
+WorkArea:
+  workArea{1..5}:
+    name: "{{company.bsBuzz}}"
+    description: "{{company.bs}}"

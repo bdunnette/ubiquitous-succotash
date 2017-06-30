@@ -15,7 +15,8 @@
       "type": "date"
     },
     "duration": {
-      "type": "string"
+      "type": "string",
+      "default":0
     }
   },
   "validations": [],

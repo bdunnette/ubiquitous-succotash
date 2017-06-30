@@ -75,7 +75,8 @@ app.controller('VolunteerViewController', function($scope, $state, $stateParams,
       where: {
         id: $stateParams.volunteerId
       },
-      include: ['attendances']
+      include: {'attendances':['workArea']}
+      // include: ['attendances']
     }
   }, function(volunteer) {
     console.log(volunteer);
